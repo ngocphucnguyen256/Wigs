@@ -1,0 +1,62 @@
+
+
+
+html{
+    font-size:62.5%;
+    font-family: 'Sofia Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+*{
+    box-sizing: border-box;
+}
+
+h2{
+    font-size:3rem;
+    font-weight: 800;
+}
+//----------------------------------------side bar--------------------------------------------
+
+.container {
+    display: flex;
+}
+.sidebar{
+    width: 25.2rem;
+    height: 100%;
+    &__wrapper{
+        margin:5rem;
+    }
+    &__logo{
+        font-size: 2.1rem;
+        font-family: 'Circular Std Book', sans-serif;
+        margin-bottom: 5.7rem;
+    }
+    &__menu{
+        &--title{
+            margin-bottom: 4.4rem;
+        }
+        &--list{
+            >:last-child{
+                margin-top: 31.6rem;
+            }
+        }
+        &--item{
+            display:flex;
+            align-items: center;
+            margin-bottom: 2.7rem;
+        }
+        &--desc{
+            margin-left: 1.2rem;
+        }
+
+    }
+
+}
+
+
+
+
