@@ -37,7 +37,7 @@ button {
 }
 
 img {
-  width: 100%;
+  width: 2.1rem;
   height: auto;
 }
 
@@ -58,7 +58,7 @@ h2 {
       -ms-flex: 1;
           flex: 1;
   width: 25.2rem;
-  height: 100%;
+  height: auto;
   position: fixed;
 }
 
@@ -68,8 +68,42 @@ h2 {
 
 .sidebar__logo {
   font-size: 2.1rem;
+  font-weight: 400;
   font-family: "Circular Std Book", sans-serif;
   margin-bottom: 5.7rem;
+  position: relative;
+}
+
+.sidebar__logo ::after {
+  content: "";
+  position: absolute;
+  left: -2.6rem;
+  top: -1rem;
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+  background: #f4de4d;
+  z-index: -10;
+}
+
+.sidebar__logo ::before {
+  content: "";
+  position: absolute;
+  left: 4.1rem;
+  top: 0rem;
+  width: 1.2rem;
+  height: .3rem;
+  background: black;
+  z-index: -10;
+}
+
+.sidebar__logo--c {
+  margin-right: .3rem;
+}
+
+.sidebar__menu {
+  font-size: 1.57rem;
+  font-weight: 400;
 }
 
 .sidebar__menu--title {
@@ -87,8 +121,7 @@ h2 {
 }
 
 .sidebar__menu--list > :last-child {
-  position: absolute;
-  bottom: 5rem;
+  margin-top: 15rem;
 }
 
 .sidebar__menu--item {
@@ -118,6 +151,7 @@ h2 {
 
 .top__menu {
   font-size: 1.7rem;
+  font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,18 +211,22 @@ h2 {
 }
 
 .menu__search--input::-webkit-input-placeholder {
+  font-size: 1.7rem;
   opacity: 0.2;
 }
 
 .menu__search--input:-ms-input-placeholder {
+  font-size: 1.7rem;
   opacity: 0.2;
 }
 
 .menu__search--input::-ms-input-placeholder {
+  font-size: 1.7rem;
   opacity: 0.2;
 }
 
 .menu__search--input::placeholder {
+  font-size: 1.7rem;
   opacity: 0.2;
 }
 
@@ -360,5 +398,29 @@ h2 {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 2.3rem;
+}
+
+@media only screen and (max-width: 70em) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media only screen and (max-width: 42em) {
+  .grid {
+    height: 120rem;
+  }
+  html {
+    font-size: 15%;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .grid {
+    height: 100rem;
+  }
+  html {
+    font-size: 10%;
+  }
 }
 /*# sourceMappingURL=css.css.map */

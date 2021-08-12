@@ -35,7 +35,7 @@ button{
     cursor: pointer;
 }
 img{
-    width: 100%;
+    width: 2.1rem;
     height: auto;
 }
 
@@ -52,7 +52,7 @@ h2{
 .sidebar{
     flex:1;
     width: 25.2rem;
-    height: 100%;
+    height: auto;
     position:fixed;
 
     &__wrapper{
@@ -61,10 +61,38 @@ h2{
     }
     &__logo{
         font-size: 2.1rem;
+        font-weight:400;
         font-family:$circular;
         margin-bottom: 5.7rem;
+        position: relative;
+        ::after{
+            content:"";
+            position: absolute;
+            left: -2.6rem;
+            top:-1rem;
+            width: 4.4rem;
+            height:4.4rem;
+            border-radius: 50%;
+            background: rgba(244, 222, 77, 1);
+            z-index: -10;
+        }
+        ::before{
+            content:"";
+            position: absolute;
+            left:4.1rem;
+            top:0rem;
+            width: 1.2rem;
+            height:.3rem;
+            background: rgba(0, 0, 0, 1);
+            z-index: -10;
+        }
+    }
+    &__logo--c{
+        margin-right: .3rem;
     }
     &__menu{
+        font-size:1.57rem;
+        font-weight: 400;
         &--title{
             margin-bottom: 4.4rem;
         }
@@ -72,8 +100,7 @@ h2{
             display: flex;
             flex-direction: column;
             >:last-child{
-               position:absolute;
-               bottom:5rem;
+               margin-top: 15rem;
             }
         }
         &--item{
@@ -104,6 +131,7 @@ h2{
 }
 .top__menu{
     font-size:1.7rem;
+    font-weight: 400;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -139,6 +167,7 @@ h2{
         margin-left: 1rem;
     }
     &__search--input::placeholder{
+        font-size:1.7rem;
         opacity: 0.2;
     }
   
@@ -266,4 +295,28 @@ h2{
             line-height: 2.3rem;
 
         }
+}
+
+    
+@media only screen and (max-width:70em){
+    html{
+        font-size: 40%;
+    }
+}
+
+@media only screen and (max-width:42em){
+    .grid{
+        height: 120rem;
+    }
+    html{
+        font-size: 15%;
+    }
+}
+@media only screen and (max-width:25em){
+    .grid{
+        height: 100rem;
+    }
+    html{
+        font-size: 10%;
+    }
 }
