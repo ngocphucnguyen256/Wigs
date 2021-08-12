@@ -32,6 +32,10 @@ button, input {
   font-family: "Circular Std Book", sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -169,6 +173,7 @@ h2 {
 .menu__search--input {
   width: 100%;
   height: auto;
+  margin-left: 1rem;
 }
 
 .menu__search--input::-webkit-input-placeholder {
@@ -187,8 +192,25 @@ h2 {
   opacity: 0.2;
 }
 
+.dropdown__cart {
+  margin-left: 4.7rem;
+}
+
+.dropdown__account {
+  margin-left: 2.5rem;
+  position: relative;
+}
+
 .dropdown__hidden {
+  left: -50%;
+  position: absolute;
   display: none;
+}
+
+.dropdown__hidden--login {
+  margin-top: .5rem;
+  display: block;
+  width: 7rem;
 }
 
 .grid {

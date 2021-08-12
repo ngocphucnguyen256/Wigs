@@ -31,6 +31,9 @@ button, input{
     color: $color;
     font-family: $circular;
 }
+button{
+    cursor: pointer;
+}
 img{
     width: 100%;
     height: auto;
@@ -133,6 +136,7 @@ h2{
     &__search--input{
        width: 100%;
         height:auto;
+        margin-left: 1rem;
     }
     &__search--input::placeholder{
         opacity: 0.2;
@@ -142,10 +146,26 @@ h2{
 
 
 .dropdown{
+    &__cart{
+        margin-left: 4.7rem;
+    }
 
+    &__account{
+        margin-left: 2.5rem;
+        position: relative;
 
+    }
     &__hidden{
+        left: -50%;
+        position: absolute;
         display: none;
+   
+    }
+    &__hidden--login{
+        margin-top: .5rem;
+        display:block;
+        width:7rem;
+
     }
 }
 
@@ -183,7 +203,9 @@ h2{
         &__item--3 { 
             grid-area: 1 / 3 / 3 / 4;
              background-image: url(./img/grid_3.png);
-               background-size: cover;
+            background-size: cover;
+
+
         }
         &__item--4 {
                 grid-area: 1 / 4 / 3 / 5;
