@@ -52,7 +52,7 @@ h2{
 .sidebar{
     flex:1;
     width: 25.2rem;
-    height: auto;
+    min-height: 100vh;
     position:fixed;
 
     &__wrapper{
@@ -135,6 +135,9 @@ h2{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &--logo{
+        display: none;
+    }
 }
 .menu{
     &__list{
@@ -169,6 +172,9 @@ h2{
     &__search--input::placeholder{
         font-size:1.7rem;
         opacity: 0.2;
+    }
+    &__menu{
+        display: none;
     }
   
 }
@@ -297,26 +303,78 @@ h2{
         }
 }
 
-    
 @media only screen and (max-width:70em){
+    html{
+        font-size: 50%;
+    }
+}
+@media only screen and (max-width:69em){
+    .sidebar__menu--list>:last-child{
+        margin-top: 30rem;
+    }
+}
+ 
+@media only screen and (max-width:52em){
     html{
         font-size: 40%;
     }
-}
+}   
 
 @media only screen and (max-width:42em){
-    .grid{
-        height: 120rem;
-    }
     html{
-        font-size: 15%;
+        font-size: 25%;
     }
+    .content__wrapper{
+        margin: 5rem 5rem 6rem 5rem;
+    }
+    .sidebar{
+        display: none;
+        position: relative;
+        &__logo{
+            display: none;
+        }
+    }
+    .top__menu--logo{
+        display:block;
+        margin: 0 1rem;
+    }
+    .menu__menu{
+        display:block;
+        position: fixed;
+        width: 1.7rem;
+        height:auto;
+        top: 5rem;
+        right: 5rem;
+    
+    }
+    .grid{
+        height:100vh;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        &__item--1 { grid-area: 1 / 1 / 2 / 2; }
+        &__item--2 { grid-area: 1/ 2 / 2 / 3; }
+        &__item--3 { grid-area: 2 / 1 / 4 / 2; }
+        &__item--4 { grid-area: 2 / 2 / 4 / 3; }
+        &__item--5 { grid-area: 4 / 1 / 6 / 2; }
+        &__item--6 { grid-area: 4 / 2 / 6 / 3; }
+        &__item--7 { grid-area: 6 / 1 / 7 / 2; }
+        &__item--8 { grid-area: 6 / 2 / 7 / 3; }
+
+
+
+
+    
+
+
+    }
+
+      
 }
 @media only screen and (max-width:25em){
     .grid{
-        height: 100rem;
+        height: 100vh;
     }
     html{
-        font-size: 10%;
+        font-size: 20%;
     }
 }
